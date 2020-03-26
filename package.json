@@ -1,0 +1,22 @@
+{
+  "name": "greattechpk.github.io",
+  "version": "1.0.0",
+  "description": "portfolio page for git hub ga project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/greattechpk/greattechpk.github.io.git"
+  },
+  "author": "Peter Koutsoukalis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/greattechpk/greattechpk.github.io/issues"
+  },
+  "homepage": "https://github.com/greattechpk/greattechpk.github.io#readme",
+  "devDependencies": {
+    "node-sass": "^4.13.1"
+  }
+}
