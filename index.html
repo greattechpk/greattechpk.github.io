@@ -1,37 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="/css/reset.css" rel="stylesheet" type="text/css">
+    <script src="https://kit.fontawesome.com/239e75df18.js" crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+    
 </head>
-<body>
-    <header>
-        <div class="header__logo--container">
-            <img class="header__logo" src="/img/ga-logo-gear.png" alt="">
+<body id="top">
+    <header class="header">
+        <div class="header__container">
+            <img class="header__container--logo" src="/img/ga-logo-gear.png" alt="">
         </div>
         <nav class="header__nav">
-            <ul>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact and Social</a></li>
-            </ul>
+                <a href="#projects">Projects</a>
+                <a href="#about">About</a>
         </nav>
     </header>
     <main>
         <section class="main__section--projects">
-            <h3>Projects</h3>
+            <h3>Projects.</h3>
+            <div class="projects">
+            <div class="project--tiles">
+                <div id="project1">
+                    <div class="description">
+                        <h4>Python & Django Project</h4>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat exercitationem eos suscipit harum minus quam, animi itaque repudiandae maxime laudantium ipsam totam ad, deserunt cum iure quisquam commodi reiciendis excepturi?
+                    </div>
+                </div>
+                <div id="project2">
+                    <div class="description">
+                        <h4>JavaScript Calculator</h4>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore eius, aperiam sapiente aliquam consequuntur inventore porro nobis incidunt illum ducimus cumque corrupti reprehenderit ab! In architecto temporibus doloribus incidunt ratione.</div>
+                </div>
+                <div id="project3">
+                    <div class="description">
+                        <h4>React JS - game</h4>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quae, maiores temporibus veniam ab corporis tempore excepturi perferendis provident, delectus adipisci commodi quasi labore ratione ex molestias odio optio amet.</div>
+                </div>
+                <div id="project4">
+                    <div class="description">
+                        <h4>Sass</h4>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat exercitationem eos suscipit harum minus quam, animi itaque repudiandae maxime laudantium ipsam totam ad, deserunt cum iure quisquam commodi reiciendis excepturi?
+                    </div>
+                </div>
+                <div id="project5">
+                    <div class="description">
+                        <h4>mobile app</h4>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore eius, aperiam sapiente aliquam consequuntur inventore porro nobis incidunt illum ducimus cumque corrupti reprehenderit ab! In architecto temporibus doloribus incidunt ratione.</div>
+                </div>
+                <div id="project6">
+                    <div class="description">
+                        <h4>backend system</h4>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quae, maiores temporibus veniam ab corporis tempore excepturi perferendis provident, delectus adipisci commodi quasi labore ratione ex molestias odio optio amet.</div>
+                </div>
+            </div>
+        </div>
         </section>
         <section class="main__section--about">
-            <h3>More About Me</h3>
-        </section>
-        <section class="main__section--contact">
-            <h3>Contact</h3>
-            
+            <h3>More About Me.</h3>
+            <div class="about__content">
+                <div class="about__content--information">
+                    <h3>
+                        Peter Koutsoukalis.
+                     </h3>
+                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa, fugit! Doloremque nisi officia exercitationem dolores ratione repellendus quasi a vitae, placeat voluptatem, reiciendis commodi facilis veritatis voluptatum, in est error.</p>
+                     <div id="true-contacts">
+                         <h3>Contact Here.</h3>
+                        <a href="mailto:great.techpk@gmail.com">great.techpk@gmail.com</a>
+                        <a href="">404-XXX-XXXX</a>
+                     </div>
+                </div>
+                <img src="/img/peter.jpg" alt="peter">
+           </div>
         </section>
     </main>
     <footer>
-        Issa fottor.
+        Peter Koutsoukalis ga-sei-27
+        <div class="social-icons">
+            <i class="fab fa-2x fa-facebook"></i>
+            <i class="fab fa-2x fa-github"></i>
+            <i class="fab fa-2x fa-linkedin"></i>
+            <i class="fab fa-2x fa-google"></i>
+        </div>
+        <a id="local-scroll" href="#top"><i class="fas fa-4x fa-arrow-up"></i></a>
     </footer>
 </body>
 </html>
