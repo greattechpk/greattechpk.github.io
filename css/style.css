@@ -4,22 +4,36 @@ html {
   scroll-behavior: smooth; }
 
 body {
-  font-family: 'Open Sans', sans-serif; }
+  font-family: "Open Sans", sans-serif; }
+
+.gear {
+  fill: #f5d78a; }
+
+.first-gear {
+  position: fixed;
+  top: 4.9rem;
+  left: 3.7rem;
+  z-index: 1200; }
+
+.second-gear {
+  position: fixed;
+  top: 8.1rem;
+  left: 13.5rem; }
+
+a {
+  color: #e6e6e6; }
+  a:hover {
+    color: seagreen; }
 
 .header {
-  background: black;
+  background: #0e1111;
   width: 100%;
-  position: absolute;
+  position: sticky;
   top: 0;
   display: flex;
-  justify-content: space-between; }
-  .header__container--logo {
-    position: absolute;
-    height: 105%;
-    margin: 10px 0 -50px 80px;
-    background-color: white;
-    border-radius: 20%;
-    box-shadow: 5px 10px 10px 10px rgba(255, 22, 22, 0.39); }
+  justify-content: space-between;
+  z-index: 100;
+  margin: 0 0 -10rem 0; }
   .header__nav {
     display: flex;
     flex-direction: row;
@@ -35,17 +49,25 @@ body {
       .header__nav > a:hover {
         background: blue; }
 
+.section--content {
+  width: 100%; }
+
+.section-header {
+  font-size: 4.5rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 10px;
+  padding: 0 0 3rem 15%; }
+
 main {
-  padding: 10rem 0 0 0; }
+  padding: 0 0 0 0; }
   main > section {
-    padding: 8rem; }
-    main > section > h3 {
-      font-size: 4.5rem;
-      text-transform: uppercase;
-      font-weight: 300;
-      letter-spacing: 10px;
-      padding: 0 0 3rem 0; }
+    padding: 0 8rem;
+    min-height: 100vh;
+    display: flex;
+    align-items: center; }
     main > section .projects {
+      margin: 0 auto;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
@@ -79,34 +101,57 @@ main {
               padding: 0 0 10px 0;
               letter-spacing: 5px;
               line-height: 40px; }
+  main .banner-about {
+    color: #f5d78a; }
   main .main__section--about {
-    background-color: silver; }
+    background-color: #3b444b; }
     main .main__section--about .about__content {
       display: flex;
       justify-content: right;
       align-items: center; }
       main .main__section--about .about__content--information {
+        display: flex;
+        flex-direction: column;
         text-align: right;
         width: 50%;
-        font-size: 1.8rem;
+        font-size: 1.2rem;
         padding: 3rem; }
-        main .main__section--about .about__content--information h3 {
-          font-size: 7rem;
+        main .main__section--about .about__content--information .about-name {
+          font-size: 6.5rem;
           font-weight: 300;
-          margin: 0 0 20px 0; }
+          margin: 0 -5rem 3rem 0;
+          color: #f5d78a; }
         main .main__section--about .about__content--information #true-contacts {
-          padding: 3rem; }
+          margin: 0 -4rem 0 0;
+          padding: 5rem 0 0 0; }
           main .main__section--about .about__content--information #true-contacts h3 {
-            font-size: 3.5rem; }
-          main .main__section--about .about__content--information #true-contacts a {
-            color: red;
-            padding: 1rem; }
-      main .main__section--about .about__content img {
-        max-height: 65rem;
-        border-radius: 50%; }
+            font-size: 3.5rem;
+            color: #f5d78a; }
+      main .main__section--about .about__content .me {
+        max-height: 60rem;
+        border-radius: 50%;
+        shape-outside: circle(50%);
+        clip-path: circle(50%); }
+
+.about-para {
+  font-size: 1.5rem;
+  letter-spacing: 0.5rem;
+  text-align: right;
+  color: #e6e6e6;
+  line-height: 3rem; }
+
+.contact-info {
+  display: flex;
+  justify-content: right;
+  flex-direction: row; }
+  .contact-info a {
+    color: #ff2841;
+    font-weight: 600;
+    font-size: 2.5rem;
+    padding: 1rem; }
 
 footer {
-  background: black;
+  background: #0e1111;
   width: 100%;
   position: fixed;
   bottom: 0;
@@ -119,17 +164,17 @@ footer {
     bottom: 20px; }
     footer .social-icons i {
       padding: 20px;
-      background-color: black;
+      background-color: #0e1111;
       border-radius: 50%; }
     footer .social-icons .fa-facebook {
       color: blue; }
     footer .social-icons .fa-google {
-      color: #EA4335; }
+      color: #ea4335; }
   footer #local-scroll {
     position: absolute;
     right: 8rem;
     bottom: 3rem;
-    background-color: black;
+    background-color: #0e1111;
     padding: 2rem;
     border-radius: 50% 50% 0 0; }
     footer #local-scroll :hover {

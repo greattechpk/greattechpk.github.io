@@ -1,178 +1,245 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap");
 
-
-html{
+$black: #0e1111;
+$secondary-black: #232b2b;
+$gray: #353839;
+$gray-blue: #3b444b;
+$secondary-gray: rgb(142, 151, 153);
+$red: #ff2841;
+$off-white: rgb(230, 230, 230);
+$gold: rgb(245, 215, 138);
+html {
     font-size: 10px;
     scroll-behavior: smooth;
 }
 
-body{
-    font-family: 'Open Sans', sans-serif;
+body {
+    font-family: "Open Sans", sans-serif;
 }
 
-.header{
-    background: black;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    display: flex;
-    justify-content: space-between;
-    &__container{
+////////////////////////////////GEARS////////////////////////////////
 
-        &--logo{
-            position: absolute;
-            height: 105%;
-            margin: 10px 0 -50px 80px;
-            background-color: white;
-            border-radius: 20%;
-            box-shadow: 5px 10px 10px 10px rgba(255, 22, 22, 0.39) ;
+.gear {
+    fill: rgb(245, 215, 138);
+}
+
+.first-gear {
+    position: fixed;
+    top: 4.9rem;
+    left: 3.7rem;
+    z-index: 1200;
+}
+
+.second-gear {
+    position: fixed;
+    top: 8.1rem;
+    left: 13.5rem;
+
+}
+
+/////////////////////////Content
+
+a {
+    color: $off-white;
+    &:hover {
+        color: seagreen;
     }
 }
 
-    &__nav{
+.header {
+    background: $black;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+    margin:  0 0 -10rem 0;
+    &__container {
+    }
 
+    &__nav {
         display: flex;
         flex-direction: row;
         align-items: center;
         min-width: 20%;
-        &> a{
+        & > a {
             padding: 40px;
             text-decoration: none;
             color: white;
             display: block;
             font-weight: 300;
             font-size: 2.5rem;
-            &:hover{
+            &:hover {
                 background: blue;
             }
         }
     }
-
 }
 
-main{
-    padding:10rem 0 0 0;
-    > section{
-        padding: 8rem;
-        > h3{
-            font-size: 4.5rem;
-            text-transform: uppercase;
-            font-weight: 300;
-            letter-spacing: 10px;
-            padding: 0 0 3rem 0;
-        }
-        .projects{
+#projects{
+}
+
+.section--content{
+    width: 100%;
+}
+
+.section-header{
+        font-size: 4.5rem;
+        text-transform: uppercase;
+        font-weight: 300;
+        letter-spacing: 10px;
+        padding: 0 0 3rem 15%;
+        
+}
+
+main {
+    padding: 0 0 0 0;
+    > section {
+        padding: 0 8rem;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        
+
+        .projects {
+            margin: 0 auto;
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: space-around;
-            
-            >.project--tiles{
-            min-width:50vw;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            & > div{
+            > .project--tiles {
+                min-width: 50vw;
                 display: flex;
-                flex-direction: column;
-                justify-content: flex-end;
-                width: 300px;
-                height: 600px;
-                border-radius: 12px;
-                background-image: url("/img/markus-spiske-qjnAnF0jIGk-unsplash.jpg");
-                background-size: contain;
-                text-align: center;
-                color: #fff;
-                margin: 0 20px;
-                >.description{
-                    padding: 20px;
-                    background-color: rgba(0, 0, 0, 0.747);
+                flex-direction: row;
+                justify-content: space-around;
+                & > div {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    width: 300px;
+                    height: 600px;
                     border-radius: 12px;
-                    font-size: 1.6rem;;
-                    >h4{
-                        font-weight: 600;
-                        text-transform: uppercase;
-                        font-size: 24px;
-                        padding:0 0 10px 0;
-                        letter-spacing: 5px;
-                        line-height: 40px;
+                    background-image: url("/img/markus-spiske-qjnAnF0jIGk-unsplash.jpg");
+                    background-size: contain;
+                    text-align: center;
+                    color: #fff;
+                    margin: 0 20px;
+                    > .description {
+                        padding: 20px;
+                        background-color: rgba(0, 0, 0, 0.747);
+                        border-radius: 12px;
+                        font-size: 1.6rem;
+                        > h4 {
+                            font-weight: 600;
+                            text-transform: uppercase;
+                            font-size: 24px;
+                            padding: 0 0 10px 0;
+                            letter-spacing: 5px;
+                            line-height: 40px;
+                        }
                     }
                 }
             }
         }
-        }
     }
-    .main__section--about{
-        background-color: silver;
-        .about__content{
+
+    // about////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    .banner-about {
+        color: $gold;
+    }
+
+    .main__section--about {
+        background-color: $gray-blue;
+        .about__content {
             display: flex;
             justify-content: right;
             align-items: center;
-            &--information{
-                h3{
-                    font-size:7rem;
-                    font-weight: 300;
-                    margin: 0 0 20px 0;
-                }
-               
+            &--information {
+                display: flex;
+                flex-direction: column;
                 text-align: right;
                 width: 50%;
-                font-size: 1.8rem;
+                font-size: 1.2rem;
                 padding: 3rem;
-                #true-contacts{
-                    padding:3rem;
-                    h3{
+                .about-name {
+                    font-size: 6.5rem;
+                    font-weight: 300;
+                    margin: 0 -5rem 3rem 0;
+                    color: $gold;
+                }
+                #true-contacts {
+                    margin: 0 -4rem 0 0;
+                    padding: 5rem 0 0 0;
+                    h3 {
                         font-size: 3.5rem;
-                    }
-                    a{
-                        color: red;
-                        padding:1rem;
+                        color: $gold;
                     }
                 }
             }
-            img{
-                max-height:65rem;
+            .me {
+                max-height: 60rem;
                 border-radius: 50%;
+                shape-outside: circle(50%);
+                clip-path: circle(50%);
             }
         }
     }
 }
 
+.about-para {
+    font-size: 1.5rem;
+    letter-spacing: 0.5rem;
+    text-align: right;
+    color: $off-white;
+    line-height: 3rem;
+}
 
+.contact-info {
+    display: flex;
+    justify-content: right;
+    flex-direction: row;
+    a {
+        color: $red;
+        font-weight: 600;
+        font-size: 2.5rem;
+        padding: 1rem;
+    }
+}
 
-footer{
-    background: black;
+footer {
+    background: $black;
     width: 100%;
     position: fixed;
     bottom: 0;
     color: white;
     font-size: 1.8rem;
     padding: 10px;
-    .social-icons{
+    .social-icons {
         position: absolute;
         right: 50%;
-        bottom:20px;
-        i{
+        bottom: 20px;
+        i {
             padding: 20px;
-            background-color: black;
+            background-color: $black;
             border-radius: 50%;
-            
         }
-        .fa-facebook{
-            color:blue;
+        .fa-facebook {
+            color: blue;
         }
-        .fa-google{
-            color: #EA4335;
+        .fa-google {
+            color: #ea4335;
         }
     }
-    #local-scroll{
+    #local-scroll {
         position: absolute;
         right: 8rem;
         bottom: 3rem;
-        background-color: black;
+        background-color: $black;
         padding: 2rem;
-        border-radius: 50% 50% 0 0 ;
-        :hover{
+        border-radius: 50% 50% 0 0;
+        :hover {
             color: white;
         }
     }
