@@ -6,20 +6,6 @@ html {
 body {
   font-family: "Open Sans", sans-serif; }
 
-.gear {
-  fill: #f5d78a; }
-
-.first-gear {
-  position: fixed;
-  top: 4.9rem;
-  left: 3.7rem;
-  z-index: 1200; }
-
-.second-gear {
-  position: fixed;
-  top: 8.1rem;
-  left: 13.5rem; }
-
 a {
   color: #e6e6e6; }
   a:hover {
@@ -47,10 +33,23 @@ a {
       font-weight: 300;
       font-size: 2.5rem; }
       .header__nav > a:hover {
-        background: blue; }
+        background: #f5d78a;
+        color: #0e1111;
+        font-weight: 400; }
 
-.section--content {
-  width: 100%; }
+.gear {
+  fill: #f5d78a; }
+
+.first-gear {
+  position: fixed;
+  top: 4.9rem;
+  left: 3.7rem;
+  z-index: 1200; }
+
+.second-gear {
+  position: fixed;
+  top: 8.1rem;
+  left: 13.5rem; }
 
 .section-header {
   font-size: 4.5rem;
@@ -66,48 +65,35 @@ main {
     min-height: 100vh;
     display: flex;
     align-items: center; }
-    main > section .projects {
-      margin: 0 auto;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-around; }
-      main > section .projects > .project--tiles {
-        min-width: 50vw;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around; }
-        main > section .projects > .project--tiles > div {
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-end;
-          width: 300px;
-          height: 600px;
-          border-radius: 12px;
-          background-image: url("/img/markus-spiske-qjnAnF0jIGk-unsplash.jpg");
-          background-size: contain;
-          text-align: center;
-          color: #fff;
-          margin: 0 20px; }
-          main > section .projects > .project--tiles > div > .description {
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.747);
-            border-radius: 12px;
-            font-size: 1.6rem; }
-            main > section .projects > .project--tiles > div > .description > h4 {
-              font-weight: 600;
-              text-transform: uppercase;
-              font-size: 24px;
-              padding: 0 0 10px 0;
-              letter-spacing: 5px;
-              line-height: 40px; }
+  main .main__section--projects {
+    background-color: #585851; }
+  main .project-item {
+    color: #e6e6e6;
+    padding: 15px;
+    border-radius: 20px;
+    margin: 100px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  main .project-description {
+    font-size: 1.5rem;
+    padding: 20px 0; }
+  main .project-name {
+    font-size: 2.3rem;
+    padding: 20px 0; }
+  main .projects {
+    display: flex;
+    align-items: center; }
+  main .section--content {
+    width: 100%; }
   main .banner-about {
     color: #f5d78a; }
   main .main__section--about {
     background-color: #3b444b; }
     main .main__section--about .about__content {
       display: flex;
-      justify-content: right;
+      justify-content: center;
       align-items: center; }
       main .main__section--about .about__content--information {
         display: flex;
@@ -128,7 +114,7 @@ main {
             font-size: 3.5rem;
             color: #f5d78a; }
       main .main__section--about .about__content .me {
-        max-height: 60rem;
+        max-height: 450px;
         border-radius: 50%;
         shape-outside: circle(50%);
         clip-path: circle(50%); }

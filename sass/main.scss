@@ -2,7 +2,7 @@
 
 $black: #0e1111;
 $secondary-black: #232b2b;
-$gray: #353839;
+$gray: #585851;
 $gray-blue: #3b444b;
 $secondary-gray: rgb(142, 151, 153);
 $red: #ff2841;
@@ -15,6 +15,47 @@ html {
 
 body {
     font-family: "Open Sans", sans-serif;
+}
+
+a {
+    color: $off-white;
+    &:hover {
+        color: seagreen;
+    }
+}
+
+
+.header {
+    background: $black;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+    margin: 0 0 -10rem 0;
+    &__container {
+    }
+
+    &__nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        min-width: 20%;
+        & > a {
+            padding: 40px;
+            text-decoration: none;
+            color: white;
+            display: block;
+            font-weight: 300;
+            font-size: 2.5rem;
+            &:hover {
+                background: $gold;
+                color: $black;
+                font-weight: 400;
+            }
+        }
+    }
 }
 
 ////////////////////////////////GEARS////////////////////////////////
@@ -34,63 +75,18 @@ body {
     position: fixed;
     top: 8.1rem;
     left: 13.5rem;
-
 }
 
 /////////////////////////Content
 
-a {
-    color: $off-white;
-    &:hover {
-        color: seagreen;
-    }
-}
 
-.header {
-    background: $black;
-    width: 100%;
-    position: sticky;
-    top: 0;
-    display: flex;
-    justify-content: space-between;
-    z-index: 100;
-    margin:  0 0 -10rem 0;
-    &__container {
-    }
 
-    &__nav {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        min-width: 20%;
-        & > a {
-            padding: 40px;
-            text-decoration: none;
-            color: white;
-            display: block;
-            font-weight: 300;
-            font-size: 2.5rem;
-            &:hover {
-                background: blue;
-            }
-        }
-    }
-}
-
-#projects{
-}
-
-.section--content{
-    width: 100%;
-}
-
-.section-header{
-        font-size: 4.5rem;
-        text-transform: uppercase;
-        font-weight: 300;
-        letter-spacing: 10px;
-        padding: 0 0 3rem 15%;
-        
+.section-header {
+    font-size: 4.5rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 10px;
+    padding: 0 0 3rem 15%;
 }
 
 main {
@@ -100,48 +96,43 @@ main {
         min-height: 100vh;
         display: flex;
         align-items: center;
-        
+    }
+    // Projects/////////////////////////////////////////////////////////////////////////
+    .main__section--projects {
+        background-color: $gray;
+    }
+    
+    .project-item{
+        color: $off-white;
+        padding:15px;
+        border-radius: 20px;
+        margin:100px;
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .project-description{
+        font-size:1.5rem;
+        padding: 20px 0;
+    }
 
-        .projects {
-            margin: 0 auto;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            > .project--tiles {
-                min-width: 50vw;
-                display: flex;
-                flex-direction: row;
-                justify-content: space-around;
-                & > div {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: flex-end;
-                    width: 300px;
-                    height: 600px;
-                    border-radius: 12px;
-                    background-image: url("/img/markus-spiske-qjnAnF0jIGk-unsplash.jpg");
-                    background-size: contain;
-                    text-align: center;
-                    color: #fff;
-                    margin: 0 20px;
-                    > .description {
-                        padding: 20px;
-                        background-color: rgba(0, 0, 0, 0.747);
-                        border-radius: 12px;
-                        font-size: 1.6rem;
-                        > h4 {
-                            font-weight: 600;
-                            text-transform: uppercase;
-                            font-size: 24px;
-                            padding: 0 0 10px 0;
-                            letter-spacing: 5px;
-                            line-height: 40px;
-                        }
-                    }
-                }
-            }
-        }
+    .project-name{
+        font-size: 2.3rem;
+        padding: 20px 0;
+    }
+
+    .projects {
+        display: flex;
+        align-items: center;
+    }
+    
+    
+    #projects {
+    }
+    
+    .section--content {
+        width: 100%;
     }
 
     // about////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -154,7 +145,7 @@ main {
         background-color: $gray-blue;
         .about__content {
             display: flex;
-            justify-content: right;
+            justify-content: center;
             align-items: center;
             &--information {
                 display: flex;
@@ -179,14 +170,17 @@ main {
                 }
             }
             .me {
-                max-height: 60rem;
+                max-height: 450px;
                 border-radius: 50%;
                 shape-outside: circle(50%);
                 clip-path: circle(50%);
             }
+            @media screen {
+            }
         }
     }
 }
+
 
 .about-para {
     font-size: 1.5rem;
