@@ -11,6 +11,7 @@ $gold: rgb(245, 215, 138);
 html {
     font-size: 10px;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -34,9 +35,6 @@ a {
     justify-content: space-between;
     z-index: 100;
     margin: 0 0 -10rem 0;
-    &__container {
-    }
-
     &__nav {
         display: flex;
         flex-direction: row;
@@ -49,10 +47,21 @@ a {
             display: block;
             font-weight: 300;
             font-size: 2.5rem;
-            &:hover {
+            &:hover,:active {
                 background: $gold;
                 color: $black;
                 font-weight: 400;
+            }
+        }
+    }
+    overflow-x: hidden;
+}
+
+@media only screen and (max-width: 600px) {
+    .header{
+        &__nav{
+            & > a{
+                padding: 15px;
             }
         }
     }
@@ -75,7 +84,26 @@ a {
     position: fixed;
     top: 8.1rem;
     left: 13.5rem;
+    z-index: 99;
 }
+
+@media only screen and (max-width: 600px) {
+    .gear{
+      scale: 50%;
+    }
+
+    .first-gear{
+        top:0px;
+        left:-10px;
+    }
+
+    .second-gear{
+        top: 16px;
+        left: 40px;
+    }
+
+
+  }
 
 /////////////////////////Content
 
@@ -96,6 +124,7 @@ main {
         min-height: 100vh;
         display: flex;
         align-items: center;
+        overflow-x: hidden;
     }
     // Projects/////////////////////////////////////////////////////////////////////////
     .main__section--projects {
@@ -175,8 +204,6 @@ main {
                 shape-outside: circle(50%);
                 clip-path: circle(50%);
             }
-            @media screen {
-            }
         }
     }
 }
@@ -210,6 +237,7 @@ footer {
     color: white;
     font-size: 1.8rem;
     padding: 10px;
+    overflow-x: hidden;
     .social-icons {
         position: absolute;
         right: 50%;
