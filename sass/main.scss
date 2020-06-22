@@ -25,7 +25,6 @@ a {
     }
 }
 
-
 .header {
     background: $black;
     width: 100%;
@@ -47,7 +46,8 @@ a {
             display: block;
             font-weight: 300;
             font-size: 2.5rem;
-            &:hover,:active {
+            &:hover,
+            :active {
                 background: $gold;
                 color: $black;
                 font-weight: 400;
@@ -58,9 +58,12 @@ a {
 }
 
 @media only screen and (max-width: 600px) {
-    .header{
-        &__nav{
-            & > a{
+    html {
+        font-size: 8px;
+    }
+    .header {
+        &__nav {
+            & > a {
                 padding: 15px;
             }
         }
@@ -88,26 +91,22 @@ a {
 }
 
 @media only screen and (max-width: 600px) {
-    .gear{
-      scale: 50%;
+    .gear {
+        scale: 50%;
     }
 
-    .first-gear{
-        top:0px;
-        left:-10px;
+    .first-gear {
+        top: 0px;
+        left: -10px;
     }
 
-    .second-gear{
+    .second-gear {
         top: 16px;
         left: 40px;
     }
-
-
-  }
+}
 
 /////////////////////////Content
-
-
 
 .section-header {
     font-size: 4.5rem;
@@ -130,23 +129,23 @@ main {
     .main__section--projects {
         background-color: $gray;
     }
-    
-    .project-item{
+
+    .project-item {
         color: $off-white;
-        padding:15px;
+        padding: 15px;
         border-radius: 20px;
-        margin:100px;
+        margin: 100px;
         background-color: black;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    .project-description{
-        font-size:1.5rem;
+    .project-description {
+        font-size: 1.5rem;
         padding: 20px 0;
     }
 
-    .project-name{
+    .project-name {
         font-size: 2.3rem;
         padding: 20px 0;
     }
@@ -155,11 +154,10 @@ main {
         display: flex;
         align-items: center;
     }
-    
-    
+
     #projects {
     }
-    
+
     .section--content {
         width: 100%;
     }
@@ -204,10 +202,100 @@ main {
                 shape-outside: circle(50%);
                 clip-path: circle(50%);
             }
+
         }
     }
 }
 
+.me-mobile {
+    display: none;
+}
+
+.about-para {
+    font-size: 1.5rem;
+    letter-spacing: 0.5rem;
+    text-align: right;
+    color: $off-white;
+    line-height: 3rem;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: right;
+    flex-direction: row;
+    a {
+        color: $red;
+        font-weight: 600;
+        font-size: 2.5rem;
+        padding: 1rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .banner-about {
+        color: $gold;
+    }
+
+    .main__section--about {
+        background-color: $gray-blue;
+        .about__content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            #true-contacts {
+                margin: 0 -4rem 0 0;
+                padding: 5rem 0 0 0;
+                h3 {
+                    font-size: 3.5rem;
+                    color: $gold;
+                }
+            }
+        }
+
+        .me-mobile {
+            display: block;
+            margin: 50px;
+            height: 300px;
+            border-radius: 50%;
+            shape-outside: circle(50%);
+            clip-path: circle(50%);
+        }
+        .me{
+            display: none;
+        }
+    }
+
+    main .main__section--about .about__content--information {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        padding: 0;
+    }
+    main .main__section--about .about__content--information .about-name{
+        text-align: center;
+        font-size: 4rem;
+        margin: 20px auto;
+    }
+    main .main__section--about .about__content--information .about-para{
+        text-align: center;
+    }
+
+    .contact-info {
+        display: flex;
+        justify-content: right;
+        flex-direction: row;
+        a {
+            color: $red;
+            font-weight: 600;
+            font-size: 2.5rem;
+            padding: 1rem;
+        }
+    }
+
+}
 
 .about-para {
     font-size: 1.5rem;

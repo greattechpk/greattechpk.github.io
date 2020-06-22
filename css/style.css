@@ -34,12 +34,15 @@ a {
       display: block;
       font-weight: 300;
       font-size: 2.5rem; }
-      .header__nav > a:hover, .header__nav > a :active {
+      .header__nav > a:hover,
+      .header__nav > a :active {
         background: #f5d78a;
         color: #0e1111;
         font-weight: 400; }
 
 @media only screen and (max-width: 600px) {
+  html {
+    font-size: 8px; }
   .header__nav > a {
     padding: 15px; } }
 
@@ -136,6 +139,74 @@ main {
         border-radius: 50%;
         shape-outside: circle(50%);
         clip-path: circle(50%); }
+
+.me-mobile {
+  display: none; }
+
+.about-para {
+  font-size: 1.5rem;
+  letter-spacing: 0.5rem;
+  text-align: right;
+  color: #e6e6e6;
+  line-height: 3rem; }
+
+.contact-info {
+  display: flex;
+  justify-content: right;
+  flex-direction: row; }
+  .contact-info a {
+    color: #ff2841;
+    font-weight: 600;
+    font-size: 2.5rem;
+    padding: 1rem; }
+
+@media only screen and (max-width: 600px) {
+  .banner-about {
+    color: #f5d78a; }
+  .main__section--about {
+    background-color: #3b444b; }
+    .main__section--about .about__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .main__section--about .about__content #true-contacts {
+        margin: 0 -4rem 0 0;
+        padding: 5rem 0 0 0; }
+        .main__section--about .about__content #true-contacts h3 {
+          font-size: 3.5rem;
+          color: #f5d78a; }
+    .main__section--about .me-mobile {
+      display: block;
+      margin: 50px;
+      height: 300px;
+      border-radius: 50%;
+      shape-outside: circle(50%);
+      clip-path: circle(50%); }
+    .main__section--about .me {
+      display: none; }
+  main .main__section--about .about__content--information {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 0; }
+  main .main__section--about .about__content--information .about-name {
+    text-align: center;
+    font-size: 4rem;
+    margin: 20px auto; }
+  main .main__section--about .about__content--information .about-para {
+    text-align: center; }
+  .contact-info {
+    display: flex;
+    justify-content: right;
+    flex-direction: row; }
+    .contact-info a {
+      color: #ff2841;
+      font-weight: 600;
+      font-size: 2.5rem;
+      padding: 1rem; } }
 
 .about-para {
   font-size: 1.5rem;
