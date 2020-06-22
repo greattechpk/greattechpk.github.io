@@ -11,7 +11,6 @@ $gold: rgb(245, 215, 138);
 html {
     font-size: 10px;
     scroll-behavior: smooth;
-    overflow-x: hidden;
 }
 
 body {
@@ -26,14 +25,18 @@ a {
 }
 
 .header {
-    background: $black;
-    width: 100%;
     position: sticky;
     top: 0;
-    display: flex;
-    justify-content: space-between;
     z-index: 100;
     margin: 0 0 -10rem 0;
+    &__container{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        width: 100%;
+        background: $black;
+        z-index: 200;
+    }
     &__nav {
         display: flex;
         flex-direction: row;
@@ -54,7 +57,6 @@ a {
             }
         }
     }
-    overflow-x: hidden;
 }
 
 @media only screen and (max-width: 600px) {
@@ -62,6 +64,9 @@ a {
         font-size: 8px;
     }
     .header {
+        &__container{
+            justify-content: center;
+        }
         &__nav {
             & > a {
                 padding: 15px;
@@ -72,37 +77,39 @@ a {
 
 ////////////////////////////////GEARS////////////////////////////////
 
+
+
 .gear {
     fill: rgb(245, 215, 138);
 }
 
 .first-gear {
-    position: fixed;
+    position: absolute;
     top: 4.9rem;
     left: 3.7rem;
     z-index: 1200;
 }
 
 .second-gear {
-    position: fixed;
+    position: absolute;
     top: 8.1rem;
     left: 13.5rem;
-    z-index: 99;
+    z-index: -1;
 }
 
 @media only screen and (max-width: 600px) {
     .gear {
-        scale: 50%;
+        height:55px;
     }
 
     .first-gear {
-        top: 0px;
-        left: -10px;
+        top: 25px;
+        left: 10px;
     }
 
     .second-gear {
-        top: 16px;
-        left: 40px;
+        top: 41px;
+        left: 60px;
     }
 }
 
@@ -320,18 +327,54 @@ main {
 footer {
     background: $black;
     width: 100%;
-    position: fixed;
+    position: sticky;
     bottom: 0;
     color: white;
     font-size: 1.8rem;
     padding: 10px;
-    overflow-x: hidden;
+}
+
+#local-scroll {
+    position: absolute;
+    right: 8rem;
+    bottom: 3rem;
+    background-color: $black;
+    padding: 2rem;
+    border-radius: 50% 50% 0 0;
+    :hover {
+        color: $gold;
+    }
+}
+
+.social-icons {
+    position: fixed;
+    right: 50%;
+    bottom: 20px;
+    z-index: 300;
+    i {
+        padding: 20px;
+        background-color: $black;
+        border-radius: 50%;
+    }
+    .fa-facebook {
+        color: blue;
+    }
+    .fa-google {
+        color: #ea4335;
+    }
+}
+
+@media only screen and (max-width: 600px) {
     .social-icons {
         position: absolute;
-        right: 50%;
-        bottom: 20px;
+        left: 5px;
+        bottom: 30px;
+        width: 100px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
         i {
-            padding: 20px;
+            padding: 10px;
             background-color: $black;
             border-radius: 50%;
         }
@@ -344,13 +387,11 @@ footer {
     }
     #local-scroll {
         position: absolute;
-        right: 8rem;
+        right: 1rem;
         bottom: 3rem;
         background-color: $black;
-        padding: 2rem;
+        padding: 1rem;
         border-radius: 50% 50% 0 0;
-        :hover {
-            color: white;
-        }
+        scale: 80%;
     }
 }

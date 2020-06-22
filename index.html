@@ -3,40 +3,40 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>PK Temp Portfolio</title>
     <link href="/css/reset.css" rel="stylesheet" type="text/css">
     <script src="https://kit.fontawesome.com/239e75df18.js" crossorigin="anonymous"></script>
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
         type="text/css">
     <link href="/css/style.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="./js/OwlCarousel2-2.3.4/dist/owl.carousel.min.css">
-    <link rel="stylesheet" href="./js/OwlCarousel2-2.3.4/dist/owl.theme.default.min.css>" </head>
+</head>
 
 <body id="top">
     <header class="header">
         <div class="header__container">
             <!-- <img class="header__container--logo" src="/img/ga-logo-gear.png" alt=""> -->
-        </div>
-        <nav class="header__nav">
-            <a href="#Projects">Projects</a>
-            <a href="#Skills">Skills</a>
-            <a href="#About">About</a>
-        </nav>
 
+            <nav class="header__nav">
+                <a href="#Projects">Projects</a>
+                <a href="#Skills">Skills</a>
+                <a href="#About">About</a>
+            </nav>
+        </div>
+        <div class="gear_container-top">
+            <img src="img/Gear.svg" alt id="leftgear" class="gear first-gear">
+            <img src="img/Gear.svg" alt id="rightgear" class="gear second-gear">
+        </div>
     </header>
-    <div class="gear_container-top">
-        <img src="img/Gear.svg" alt id="leftgear" class="gear first-gear">
-        <img src="img/Gear.svg" alt id="rightgear" class="gear second-gear">
-    </div>
-    <main>
+
+    <main id="main">
 
         <section id="Projects" class="main__section--projects">
             <div class="section--content">
                 <div class="projects">
                     <div class="project--tiles">
                         <div class="owl-carousel owl-theme">
-                            <div id="project1" class="item project-item">
+                            <!-- <div id="project1" class="item project-item">
                                 <h4 class="project-name">Javascript Bash Terminal Game</h4>
                                 <img class="project-image" src="/img/markus-spiske-qjnAnF0jIGk-unsplash.jpg">
                                 <div class="project-description">
@@ -81,11 +81,11 @@
                                     <button>Live Version</button>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
 
+                        </div>
                     </div>
                 </div>
-            </div>
 
 
             </div>
@@ -128,9 +128,5 @@
     </footer>
 </body>
 <script src="/js/gears.js"></script>
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"
-    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-<script src="./js/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
-<script src="./js//OwlCarousel2-2.3.4/dist/jquery.js"></script>
 
 </html>
