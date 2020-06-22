@@ -31,10 +31,18 @@
 
     <main id="main">
 
+
         <section id="Projects" class="main__section--projects">
             <div class="section--content">
                 <div class="projects">
                     <div class="project--tiles">
+                        <button id="goFS">Go fullscreen</button>
+                        <script>
+                          var goFS = document.getElementById("goFS");
+                          goFS.addEventListener("click", function() {
+                              document.body.requestFullscreen();
+                          }, false);
+                        </script>
                         <div class="owl-carousel owl-theme">
                             <!-- <div id="project1" class="item project-item">
                                 <h4 class="project-name">Javascript Bash Terminal Game</h4>

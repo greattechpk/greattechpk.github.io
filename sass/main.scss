@@ -11,6 +11,7 @@ $gold: rgb(245, 215, 138);
 html {
     font-size: 10px;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -365,10 +366,20 @@ footer {
 }
 
 @media only screen and (max-width: 600px) {
+    footer {
+        background: $black;
+        width: 100vw;
+        position: sticky;
+        bottom: 0;
+        color: white;
+        font-size: 12px;
+        padding: 5px;
+    }
+
     .social-icons {
         position: absolute;
         left: 5px;
-        bottom: 30px;
+        bottom: 20px;
         width: 100px;
         display: flex;
         flex-direction: row;
@@ -387,8 +398,8 @@ footer {
     }
     #local-scroll {
         position: absolute;
-        right: 1rem;
-        bottom: 3rem;
+        right: 20px;
+        bottom: 10px;
         background-color: $black;
         padding: 1rem;
         border-radius: 50% 50% 0 0;
