@@ -42,13 +42,26 @@ a {
         color: #0e1111;
         font-weight: 400; }
 
+.fullscreen {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  margin-right: 30px; }
+
 @media only screen and (max-width: 600px) {
   html {
     font-size: 8px; }
   .header__container {
     justify-content: center; }
   .header__nav > a {
-    padding: 15px; } }
+    padding: 15px; }
+  .fullscreen {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-right: 0;
+    position: absolute;
+    right: 0; } }
 
 .gear {
   fill: #f5d78a; }

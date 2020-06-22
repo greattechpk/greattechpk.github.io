@@ -60,6 +60,13 @@ a {
     }
 }
 
+.fullscreen{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin-right:30px;
+}
+
 @media only screen and (max-width: 600px) {
     html {
         font-size: 8px;
@@ -73,6 +80,14 @@ a {
                 padding: 15px;
             }
         }
+    }
+    .fullscreen{
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        margin-right:0;
+        position: absolute;
+        right: 0;
     }
 }
 
