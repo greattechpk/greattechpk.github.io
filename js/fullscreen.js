@@ -1,5 +1,5 @@
 let isFS = false
-var goFS = document.getElementById("goFS");
+let goFS = document.getElementById("goFS");
 let iconFS = document.getElementById('iconFS')
 
 goFS.addEventListener("click", function () {

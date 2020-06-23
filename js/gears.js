@@ -1,4 +1,3 @@
-
 const leftgear = document.getElementById("leftgear")
 const rightgear = document.getElementById("rightgear")
 
