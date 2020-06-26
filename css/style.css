@@ -202,10 +202,29 @@ main {
       min-height: 0;
       padding: 40px 20px; } }
   main .skill-section {
-    margin: -25vh 0;
+    margin: -25% 0;
     z-index: 1;
-    min-height: 100vh;
     background-color: #232b2b; }
+  main .skills {
+    width: 100%;
+    padding: 25% 0;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap; }
+  main .skill-item {
+    display: flex;
+    color: #f5d78a;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+    margin: 5px; }
+  main .skill-img {
+    height: 80px;
+    padding: 5px;
+    background-color: #8e9799;
+    border-radius: 20%; }
+  main .skill-name {
+    padding: 5px; }
   main .banner-about {
     color: #f5d78a; }
   main .main__section--about {
@@ -324,7 +343,7 @@ main {
   color: #f5d78a; }
 
 .accordion:hover {
-  background-color: #585851;
+  background-color: #232b2b;
   outline: none; }
 
 /* Style the accordion panel. Note: hidden by default */

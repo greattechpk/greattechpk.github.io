@@ -288,10 +288,34 @@ main {
     // Skills ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     .skill-section {
-        margin: -25vh 0;
+        margin: -25% 0;
         z-index: 1;
-        min-height: 100vh;
         background-color: $secondary-black;
+    }
+    .skills{
+        width: 100%;
+        padding: 25% 0;
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .skill-item{
+        display: flex;
+        color: $gold;
+        flex-direction: column;
+        align-items: center;
+        font-size: 12px;
+        margin: 5px;
+    }
+    .skill-img{
+        height:80px;
+        padding: 5px;
+        background-color: $secondary-gray;
+        border-radius: 20%;
+    }
+    .skill-name{
+        padding: 5px;
     }
 
     // about////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -449,7 +473,7 @@ main {
     color: $gold;
 }
 .accordion:hover {
-    background-color: $gray;
+    background-color: $secondary-black;
     outline: none;
 }
 
