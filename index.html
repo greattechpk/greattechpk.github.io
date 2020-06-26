@@ -35,57 +35,10 @@
 
     <main id="main">
 
+        <!-- Start Projects -->
 
         <section id="Projects" class="main__section--projects">
             <div class="section--content">
-
-                <!-- <div id="project1" class="item project-item">
-                                <h4 class="project-name">Javascript Bash Terminal Game</h4>
-                                <img class="project-image" src="/img/markus-spiske-qjnAnF0jIGk-unsplash.jpg">
-                                <div class="project-description">
-                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat exercitationem
-                                    eos
-                                    suscipit harum minus quam, animi itaque repudiandae maxime laudantium ipsam totam
-                                    ad,
-                                    deserunt cum iure quisquam commodi reiciendis excepturi?
-                                </div>
-                                <div class="project-links">
-                                    <button>Git Hub</button>
-                                    <button>Live Version</button>
-                                </div>
-                            </div>
-                            <div id="project2" class="item project-item">
-                                <h4 class="project-name">T1D Pump App</h4>
-                                <img class="project-image" src="/img/markus-spiske-qjnAnF0jIGk-unsplash.jpg">
-                                <div class="project-description">
-                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat exercitationem
-                                    eos
-                                    suscipit harum minus quam, animi itaque repudiandae maxime laudantium ipsam totam
-                                    ad,
-                                    deserunt cum iure quisquam commodi reiciendis excepturi?
-                                </div>
-                                <div class="project-links">
-                                    <button>Git Hub</button>
-                                    <button>Live Version</button>
-                                </div>
-                            </div>
-                            <div id="project3" class="item project-item">
-                                <h4 class="project-name">Smash Bros. Melee React App</h4>
-                                <img class="project-image" src="/img/markus-spiske-qjnAnF0jIGk-unsplash.jpg">
-                                <div class="project-description">
-                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat exercitationem
-                                    eos
-                                    suscipit harum minus quam, animi itaque repudiandae maxime laudantium ipsam totam
-                                    ad,
-                                    deserunt cum iure quisquam commodi reiciendis excepturi?
-                                </div>
-                                <div class="project-links">
-                                    <button>Git Hub</button>
-                                    <button>Live Version</button>
-                                </div>
-                            </div>
-                        </div> -->
-
                 <div class="carousel" data-flickity='{ "autoPlay": true }'>
                     <div class="carousel-cell">
                         <div id="project1" class="item project-item">
@@ -143,6 +96,14 @@
                 </div>
             </div>
         </section>
+        <!-- Start Skills -->
+        <section id="Skills" class="skill-section">
+            <div class='skills'>
+
+            </div>
+        </section>
+
+        <!-- Start About -->
         <section id="About" class="main__section--about">
             <div class="section--content">
                 <div class="about__content">
@@ -151,18 +112,48 @@
                         <h3 class="about-name">
                             Peter Koutsoukalis.
                         </h3>
-                        <p class="about-para">“With 3 years of freelance web design, 4 years of self taught programming
-                            experience and General Assembly I’m looking for a fast paced well rounded career allowing
-                            for
-                            creativity and growth in technology and people. Bringing solutions to complex situations
-                            within
-                            a team are one of my strong suits and adapting to new areas to solve problems keeps life
-                            exciting! ”</p>
+
+                        <button class="accordion">About Me</button>
+                        <div class="panel">
+                            <div class="panel-internal">
+                                <p class="about-para">
+                                    “With 3 years of freelance web design, 4 years of self taught programming
+                                    experience and General Assembly I’m looking for a fast paced well rounded career
+                                    allowing
+                                    for
+                                    creativity and growth in technology and people. Bringing solutions to complex situations
+                                    within
+                                    a team are one of my strong suits and adapting to new areas to solve problems keeps life
+                                    exciting! ”
+                                </p>
+                            </div>
+                            
+                        </div>
+
+                        <button class="accordion">Education</button>
+                        <div class="panel">
+                            <div class="panel-internal education-panel">
+                                <div class="education-item"><div class="education-title">General Assembly</div> <span>..............................................................................................................................................................</span><div class="education-time">03/2020 - 06/2020</div></div>
+                                <div class="education-item"><div class="education-title">FreeCodeCamp.org</div> <span>..............................................................................................................................................................</span><div class="education-time">11/2017 - Present</div></div>
+                                <div class="education-item"><div class="education-title">ABTU Computer Science</div> <span>..............................................................................................................................................................</span><div class="education-time">05/2016 - 06/2017</div></div>
+                            </div>
+                        </div>
+
+                        <button class="accordion">Certifications</button>
+                        <div class="panel">
+                            <div class="panel-internal">
+                                <img class="certification" src="/img/freeCodecamp-ResposiveWebDesign.png" />
+                                <img class="certification" src="/img/Udemy JavaScript360.jpg" />
+                            </div>
+                        </div>
+
                         <div id="true-contacts">
-                            <h3>Contact Here.</h3>
+                            <h3>Contact & Resume.</h3>
                             <div class="contact-info">
                                 <a href="mailto:great.techpk@gmail.com">great.techpk@gmail.com</a>
                                 <a href="">404-277-5331</a>
+                                <a href="">Download Resume</a>
+
                             </div>
                         </div>
                     </div>
@@ -172,7 +163,7 @@
         </section>
     </main>
     <footer>
-        Peter Koutsoukalis
+        Peter Koutsoukalis Portfolio
         <div class="social-icons">
             <i class="fab fa-2x fa-github"></i>
             <i class="fab fa-2x fa-linkedin"></i>
@@ -182,6 +173,7 @@
 </body>
 <script src="/js/gears.js"></script>
 <script src="/js/fullscreen.js"></script>
+<script src="/js/accordion.js"></script>
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 
 </html>

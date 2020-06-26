@@ -20,8 +20,11 @@ body {
     font-family: $font;
 }
 
-a {
+a,
+a:active,
+a:focus {
     color: $off-white;
+    outline: none;
     &:hover {
         color: seagreen;
     }
@@ -39,8 +42,7 @@ button {
     font-size: 2rem;
     cursor: pointer;
     text-align: center;
-    transition: background 250ms ease-in-out, 
-                transform 150ms ease;
+    transition: background 250ms ease-in-out, transform 150ms ease;
     -webkit-appearance: none;
     -moz-appearance: none;
 }
@@ -81,17 +83,16 @@ button:focus {
             display: block;
             font-weight: 300;
             font-size: 2.5rem;
-            &:hover{
+            &:hover {
                 background: $gold;
                 color: $black;
                 font-weight: 400;
             }
-             
         }
     }
 }
 
-.active{
+.active {
     background: $gold;
     color: $black !important;
 }
@@ -175,22 +176,13 @@ button:focus {
     letter-spacing: 10px;
     padding: 0 0 3rem 15%;
 }
-@media only screen and (max-width: 600px) {
-    
-}
 
 main {
     padding: 0 0 0 0;
-    > section {
-        padding: 40px 0;
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        overflow-x: hidden;
-    }
     // Projects/////////////////////////////////////////////////////////////////////////
     .main__section--projects {
         background-color: $gray;
+        z-index: 2;
     }
 
     .project-item {
@@ -212,15 +204,13 @@ main {
         padding: 20px 0;
     }
 
-    .project-links{
+    .project-links {
         margin: 20px;
         width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
     }
-
-    
 
     .project-name {
         font-size: 3.5rem;
@@ -280,6 +270,30 @@ main {
         }
     }
 
+    section {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        overflow-x: hidden;
+        position: relative;
+    }
+
+    @media only screen and (max-width: 600px) {
+        section {
+            min-height: 0;
+            padding: 40px 20px;
+        }
+    }
+
+    // Skills ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    .skill-section {
+        margin: -25vh 0;
+        z-index: 1;
+        min-height: 100vh;
+        background-color: $secondary-black;
+    }
+
     // about////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     .banner-about {
@@ -288,6 +302,8 @@ main {
 
     .main__section--about {
         background-color: $gray-blue;
+        position: relative;
+        z-index: 2;
         .about__content {
             display: flex;
             justify-content: center;
@@ -305,14 +321,6 @@ main {
                     margin: 0 -5rem 3rem 0;
                     color: $gold;
                 }
-                #true-contacts {
-                    margin: 0 -4rem 0 0;
-                    padding: 5rem 0 0 0;
-                    h3 {
-                        font-size: 3.5rem;
-                        color: $gold;
-                    }
-                }
             }
             .me {
                 max-height: 450px;
@@ -321,6 +329,15 @@ main {
                 clip-path: circle(50%);
             }
         }
+    }
+}
+
+#true-contacts {
+    margin: 0 -4rem 0 0;
+    padding: 5rem 0 0 0;
+    h3 {
+        font-size: 3.5rem;
+        color: $gold;
     }
 }
 
@@ -360,26 +377,25 @@ main {
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            #true-contacts {
-                margin: 0 -4rem 0 0;
-                padding: 5rem 0 0 0;
-                h3 {
-                    font-size: 3.5rem;
-                    color: $gold;
-                }
-            }
         }
 
         .me-mobile {
             display: block;
-            margin: 50px;
-            height: 300px;
+            margin: 0 20px;
+            height: 200px;
             border-radius: 50%;
-            shape-outside: circle(50%);
-            clip-path: circle(50%);
         }
         .me {
             display: none;
+        }
+    }
+
+    #true-contacts {
+        margin: 0;
+        padding: 15px 0 0 0;
+        h3 {
+            font-size: 3rem;
+            color: $gold;
         }
     }
 
@@ -402,8 +418,8 @@ main {
 
     .contact-info {
         display: flex;
-        justify-content: right;
-        flex-direction: row;
+        align-items: center;
+        flex-direction: column;
         a {
             color: $red;
             font-weight: 600;
@@ -413,25 +429,102 @@ main {
     }
 }
 
-.about-para {
-    font-size: 1.5rem;
-    letter-spacing: 0.5rem;
-    text-align: right;
-    color: $off-white;
-    line-height: 3rem;
+//accordian
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+    background-color: $secondary-black;
+    color: $gold;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
 }
 
-.contact-info {
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active_acc {
+    color: $gold;
+}
+.accordion:hover {
+    background-color: $gray;
+    outline: none;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+    padding: 0 15px;
+    background-color: $gray;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+.education-panel {
+    align-items: center;
+    flex-direction: column;
+}
+.panel-internal {
+    padding: 15px;
     display: flex;
-    justify-content: right;
+}
+
+.education-item {
+    padding: 5px;
+    font-size: 20px;
+    display: flex;
     flex-direction: row;
-    a {
-        color: $red;
-        font-weight: 600;
-        font-size: 2.5rem;
-        padding: 1rem;
+    color: $off-white;
+    width: 100%;
+    justify-content: center;
+    span {
+        flex: 1; /* 3 */
+        overflow: hidden; /* 4 */
+    }
+    .education-title {
+        margin-left: 20%;
+        margin-right: 5px;
+    }
+    .education-time {
+        margin-right: 20%;
+        margin-left: 5px;
+        color: $gold;
     }
 }
+
+.certification {
+    width: 50%;
+    margin: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+    .panel {
+        width: 100%;
+        padding: 0;
+    }
+    .panel-internal {
+        padding: 10px 5px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .certification {
+        width: 100%;
+        margin: 5px;
+    }
+    .education-item {
+        font-size: 15px;
+
+        .education-title {
+            margin: 0;
+        }
+        .education-time {
+            margin: 0;
+        }
+    }
+}
+
+// footer
 
 footer {
     background: $black;
@@ -441,6 +534,7 @@ footer {
     color: white;
     font-size: 1.8rem;
     padding: 10px;
+    z-index: 3;
 }
 
 #local-scroll {
@@ -448,7 +542,7 @@ footer {
     right: 8rem;
     bottom: 3rem;
     background-color: $black;
-    padding: 2rem;
+    padding: 1rem;
     border-radius: 50% 50% 0 0;
     :hover {
         color: $gold;
@@ -480,13 +574,13 @@ footer {
         position: sticky;
         bottom: 0;
         color: white;
-        font-size: 12px;
+        font-size: 18px;
         padding: 5px;
     }
 
     .social-icons {
         position: absolute;
-        left: 5px;
+        left: 15px;
         bottom: 20px;
         width: 100px;
         display: flex;
