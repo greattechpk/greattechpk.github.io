@@ -42,7 +42,6 @@ const calculateMid = () => {
 
 
 function scrollId(currentIndex) {
-    console.log(eleArr[currentIndex])
     let activeItem = document.querySelector(".active")
 
     activeItem.classList.remove("active")
