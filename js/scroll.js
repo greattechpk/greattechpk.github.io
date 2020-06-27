@@ -50,4 +50,4 @@ function scrollId(currentIndex) {
     return eleArr[currentIndex].classList.add("active")
 }
 
-document.onscroll = calculateMid
+window.onscroll = calculateMid
