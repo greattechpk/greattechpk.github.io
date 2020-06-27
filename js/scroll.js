@@ -50,4 +50,17 @@ function scrollId(currentIndex) {
     return eleArr[currentIndex].classList.add("active")
 }
 
-window.onscroll = calculateMid
+// window.onscroll = calculateMid
+document.addEventListener("touchmove", ScrollStart, false);
+document.addEventListener("scroll", Scroll, false);
+
+function ScrollStart() {
+   Scroll()
+}
+
+function Scroll() {
+    //end of scroll event for iOS
+    //and
+    //start/end of scroll event for other browsers
+    calculateMid()
+}
