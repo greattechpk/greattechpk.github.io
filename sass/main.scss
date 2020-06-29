@@ -45,6 +45,10 @@ button {
     transition: background 250ms ease-in-out, transform 150ms ease;
     -webkit-appearance: none;
     -moz-appearance: none;
+    outline: none;
+    &::-moz-focus-inner { 
+        border: 0; 
+      }
 }
 
 button:hover,
@@ -54,8 +58,7 @@ button:focus {
 }
 
 button:focus {
-    outline: 1px solid #fff;
-    outline-offset: -4px;
+    outline: none;
 }
 
 .header {
@@ -395,7 +398,7 @@ main {
     }
 
     .main__section--about {
-        background-color: $gray-blue;
+        background-color: $gray-blue;    outline: none;
         .about__content {
             display: flex;
             flex-direction: column;
@@ -473,8 +476,8 @@ main {
     color: $gold;
 }
 .accordion:hover {
-    background-color: $secondary-black;
-    outline: none;
+    color: $gold;
+    background-color: $black;
 }
 
 /* Style the accordion panel. Note: hidden by default */

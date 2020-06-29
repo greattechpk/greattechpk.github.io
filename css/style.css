@@ -31,7 +31,10 @@ button {
   text-align: center;
   transition: background 250ms ease-in-out, transform 150ms ease;
   -webkit-appearance: none;
-  -moz-appearance: none; }
+  -moz-appearance: none;
+  outline: none; }
+  button::-moz-focus-inner {
+    border: 0; }
 
 button:hover,
 button:focus {
@@ -39,8 +42,7 @@ button:focus {
   color: #232b2b; }
 
 button:focus {
-  outline: 1px solid #fff;
-  outline-offset: -4px; }
+  outline: none; }
 
 .header {
   position: sticky;
@@ -284,7 +286,8 @@ main {
   .banner-about {
     color: #f5d78a; }
   .main__section--about {
-    background-color: #3b444b; }
+    background-color: #3b444b;
+    outline: none; }
     .main__section--about .about__content {
       display: flex;
       flex-direction: column;
@@ -343,8 +346,8 @@ main {
   color: #f5d78a; }
 
 .accordion:hover {
-  background-color: #232b2b;
-  outline: none; }
+  color: #f5d78a;
+  background-color: #0e1111; }
 
 /* Style the accordion panel. Note: hidden by default */
 .panel {
